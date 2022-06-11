@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router"
 
-function EditPlaceForm() {
+function EditUnitForm() {
 
 	const history = useHistory()
 
-    const { placeId } = useParams()
+    const { unitId } = useParams()
 
-    const [place, setPlace] = useState({
+    const [unit, setUnit] = useState({
 		name: '',
 		pic: '',
 		city: '',
@@ -17,37 +17,37 @@ function EditPlaceForm() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(`http://localhost:5000/places/${placeId}`)
+			const response = await fetch(`http://localhost:5000/units/${unitId}`)
 			const resData = await response.json()
-			setPlace(resData)
+			setUnit(resData)
 		}
 		fetchData()
-	}, [ placeId ])
+	}, [ unitId ])
 
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`http://localhost:5000/places/${place.placeId}`, {
+		await fetch(`http://localhost:5000/units/${unit.unitId}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(place)
+			body: JSON.stringify(unit)
 		})
 
-		history.push(`/places/${place.placeId}`)
+		history.push(`/units/${unit.unitId}`)
 	}
 
 	return (
 		<main>
-			<h1>Edit Place</h1>
+			<h1>Edit Unit</h1>
 			<form onSubmit={handleSubmit}>
 				<div className="form-group">
-					<label htmlFor="name">Place Name</label>
+					<label htmlFor="name">Unit Name</label>
 					<input
 						required
-						value={place.name}
-						onChange={e => setPlace({ ...place, name: e.target.value })}
+						value={unit.name}
+						onChange={e => setUnit({ ...unit, name: e.target.value })}
 						className="form-control"
 						id="name"
 						name="name"
@@ -57,18 +57,18 @@ function EditPlaceForm() {
 					<label htmlFor="founded">Year Founded</label>
 					<input
 						required
-						value={place.founded}
-						onChange={e => setPlace({ ...place, founded: e.target.value })}
+						value={unit.founded}
+						onChange={e => setUnit({ ...unit, founded: e.target.value })}
 						className="form-control"
 						id="founded"
 						name="founded"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="pic">Place Picture</label>
+					<label htmlFor="pic">Unit Picture</label>
 					<input
-						value={place.pic}
-						onChange={e => setPlace({ ...place, pic: e.target.value })}
+						value={unit.pic}
+						onChange={e => setUnit({ ...unit, pic: e.target.value })}
 						className="form-control"
 						id="pic"
 						name="pic"
@@ -77,8 +77,8 @@ function EditPlaceForm() {
 				<div className="form-group">
 					<label htmlFor="city">City</label>
 					<input
-						value={place.city}
-						onChange={e => setPlace({ ...place, city: e.target.value })}
+						value={unit.city}
+						onChange={e => setUnit({ ...unit, city: e.target.value })}
 						className="form-control"
 						id="city"
 						name="city"
@@ -87,8 +87,8 @@ function EditPlaceForm() {
 				<div className="form-group">
 					<label htmlFor="state">State</label>
 					<input
-						value={place.state}
-						onChange={e => setPlace({ ...place, state: e.target.value })}
+						value={unit.state}
+						onChange={e => setUnit({ ...unit, state: e.target.value })}
 						className="form-control"
 						id="state"
 						name="state"
@@ -97,8 +97,8 @@ function EditPlaceForm() {
 				<div className="form-group">
 					<label htmlFor="cuisines">Cuisines</label>
 					<input
-						value={place.cuisines}
-						onChange={e => setPlace({ ...place, cuisines: e.target.value })}
+						value={unit.cuisines}
+						onChange={e => setUnit({ ...unit, cuisines: e.target.value })}
 						className="form-control"
 						id="cuisines" name="cuisines" required />
 				</div>
@@ -108,4 +108,4 @@ function EditPlaceForm() {
 	)
 }
 
-export default EditPlaceForm
+export default EditUnitForm

@@ -40,13 +40,13 @@ function Navigation() {
                     </a>
                 </li>
                 <li>
-                    <a href="#" onClick={() => history.push("/places")}>
-                        Places
+                    <a href="#" onClick={() => history.push("/units")}>
+                        Units
                     </a>
                 </li>
                 <li>
-                    <a href="#" onClick={() => history.push("/places/new")}>
-                        Add Place
+                    <a href="#" onClick={() => history.push("/units/new")}>
+                        Add Unit
                     </a>
                 </li>
                 {loginActions}

@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      place_id: {
+      unit_id: {
         type: Sequelize.SMALLINT
       },
       stars: {

@@ -3,32 +3,32 @@ const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
 
-  class Place extends Model {
+  class Unit extends Model {
 
 
     static associate({ Comment }) {
-      Place.hasMany(Comment, { foreignKey: 'place_id', as: 'comments' })
+      Unit.hasMany(Comment, { foreignKey: 'unit_id', as: 'comments' })
     }
 
   };
 
-  Place.init({
-    placeId: {
+  Unit.init({
+    unitId: {
       type: DataTypes.SMALLINT,
       primaryKey: true,
       autoIncrement: true
 
     },
     name: DataTypes.STRING,
-    city: DataTypes.STRING,
-    state: DataTypes.STRING,
-    cuisines: DataTypes.STRING,
+    rank: DataTypes.STRING,
+    legion: DataTypes.STRING,
+    keywords: DataTypes.STRING,
     pic: DataTypes.STRING,
-    founded: DataTypes.INTEGER
+    recruited: DataTypes.INTEGER
   }, {
     sequelize,
     underscored: true,
-    modelName: 'Place',
+    modelName: 'Unit',
   });
-  return Place;
+  return Unit;
 };

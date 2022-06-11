@@ -16,35 +16,35 @@ module.exports = {
       `SELECT user_id from users LIMIT 1;`
     );
 
-    await queryInterface.bulkInsert('places', [
+    await queryInterface.bulkInsert('units', [
       {
         name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
+        rank: 'Seattle',
+        legion: 'WA',
+        keywords: 'Thai, Pan-Asian',
         pic: `http://localhost:${process.env.PORT}/images/h-thai-ml-tables.jpg`,
-        founded: 1989,
+        recruited: 1989,
         created_at: new Date(),
         updated_at: new Date()
       }, {
         name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
+        rank: 'Phoenix',
+        legion: 'AZ',
+        keywords: 'Coffee, Bakery',
         pic: `http://localhost:${process.env.PORT}/images/coffee-cat.png`,
-        founded: 2020,
+        recruited: 2020,
         created_at: new Date(),
         updated_at: new Date()
       }
     ])
 
-    const [places] = await queryInterface.sequelize.query(
-      `SELECT place_id from places LIMIT 1;`
+    const [units] = await queryInterface.sequelize.query(
+      `SELECT unit_id from units LIMIT 1;`
     );
 
     await queryInterface.bulkInsert('comments', [
       {
-        place_id: places[0].place_id,
+        unit_id: units[0].unit_id,
         author_id: users[0].user_id,
         rant: false,
         stars: 5.0,
@@ -57,7 +57,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete('users', null, {});
-    await queryInterface.bulkDelete('places', null, {});
+    await queryInterface.bulkDelete('units', null, {});
     await queryInterface.bulkDelete('comments', null, {});
   }
 };

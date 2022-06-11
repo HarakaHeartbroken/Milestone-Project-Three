@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/places', require('./controllers/places'))
+app.use('/units', require('./controllers/units'))
 app.use('/users', require('./controllers/users'))
 
 // Listen for Connections
