@@ -10,9 +10,9 @@ function EditUnitForm() {
     const [unit, setUnit] = useState({
 		name: '',
 		pic: '',
-		city: '',
-		state: '',
-		cuisines: ''
+		rank: '',
+		legion: '',
+		keywords: ''
 	})
 
 	useEffect(() => {
@@ -54,14 +54,14 @@ function EditUnitForm() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="founded">Year Founded</label>
+					<label htmlFor="recruited">Year Recruited</label>
 					<input
 						required
-						value={unit.founded}
-						onChange={e => setUnit({ ...unit, founded: e.target.value })}
+						value={unit.recruited}
+						onChange={e => setUnit({ ...unit, recruited: e.target.value })}
 						className="form-control"
-						id="founded"
-						name="founded"
+						id="recruited"
+						name="recruited"
 					/>
 				</div>
 				<div className="form-group">
@@ -75,32 +75,32 @@ function EditUnitForm() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="city">City</label>
+					<label htmlFor="rank">Rank</label>
 					<input
-						value={unit.city}
-						onChange={e => setUnit({ ...unit, city: e.target.value })}
+						value={unit.rank}
+						onChange={e => setUnit({ ...unit, rank: e.target.value })}
 						className="form-control"
-						id="city"
-						name="city"
+						id="rank"
+						name="rank"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="state">State</label>
+					<label htmlFor="legion">Legion</label>
 					<input
-						value={unit.state}
-						onChange={e => setUnit({ ...unit, state: e.target.value })}
+						value={unit.legion}
+						onChange={e => setUnit({ ...unit, legion: e.target.value })}
 						className="form-control"
-						id="state"
-						name="state"
+						id="legion"
+						name="legion"
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="cuisines">Cuisines</label>
+					<label htmlFor="keywords">Keywords</label>
 					<input
-						value={unit.cuisines}
-						onChange={e => setUnit({ ...unit, cuisines: e.target.value })}
+						value={unit.keywords}
+						onChange={e => setUnit({ ...unit, keywords: e.target.value })}
 						className="form-control"
-						id="cuisines" name="cuisines" required />
+						id="keywords" name="keywords" required />
 				</div>
 				<input className="btn btn-primary" type="submit" value="Save" />
 			</form>
