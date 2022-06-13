@@ -46,8 +46,13 @@ a:hover {
 }
 
 #content {
+    margin-left: 150px;
+    margin-right: 150px;
     margin-top: 300px;
     display: flex;
     text-align: center;
     justify-content: center;
+    color: #fff;
+    border-color: #282828;
+    background: #282828;
 }
