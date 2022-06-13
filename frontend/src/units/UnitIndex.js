@@ -25,18 +25,18 @@ function UnitIndex(data) {
 					</a>
 				</h2>
 				<p className="text-center">
-					{unit.cuisines}
+					{unit.keywords}
 				</p>
 				<img style={{ maxWidth: 200 }} src={unit.pic} alt={unit.name} />
 				<p className="text-center">
-					Located in {unit.city}, {unit.state}
+					Unit data: {unit.rank}, {unit.legion}
 				</p>
 			</div>
 		)
 	})
 	return (
 		<main>
-			<h1>Units to Rant or Rave About</h1>
+			<h1>Units to Praise or Damn</h1>
 			<div className="row">
 				{unitsFormatted}
 			</div>

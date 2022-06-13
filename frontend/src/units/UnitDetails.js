@@ -108,7 +108,7 @@ function UnitDetails() {
 				<div className="col-sm-6">
 					<img style={{ maxWidth: 200 }} src={unit.pic} alt={unit.name} />
 					<h3>
-						Located in {unit.city}, {unit.state}
+						ALPHA-PRIORIS DATA BEGINS: {unit.name}: {unit.rank}, {unit.legion}
 					</h3>
 				</div>
 				<div className="col-sm-6">
@@ -122,10 +122,10 @@ function UnitDetails() {
 						Description
 					</h2>
 					<h3>
-						{unit.name} has been serving {unit.city}, {unit.state} since {unit.founded}.
+						{unit.name} has been serving as a {unit.rank}, in the {unit.legion} Legion since {unit.recruited}.
 					</h3>
 					<h4>
-						Serving {unit.cuisines}.
+						Keywords: {unit.keywordss}.
 					</h4>
 					<br />
 					<a className="btn btn-warning" onClick={editUnit}>

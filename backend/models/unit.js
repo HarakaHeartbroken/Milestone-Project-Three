@@ -19,10 +19,26 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
 
     },
-    name: DataTypes.STRING,
-    rank: DataTypes.STRING,
-    legion: DataTypes.STRING,
-    keywords: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'Lorem Ipsum'
+    },
+    rank: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'Legionary'
+    },
+    legion: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'Second Legion'
+    },
+    rank: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: 'Infantry'
+    },
     pic: DataTypes.STRING,
     recruited: DataTypes.INTEGER
   }, {
