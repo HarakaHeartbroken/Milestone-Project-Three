@@ -18,21 +18,21 @@ module.exports = {
 
     await queryInterface.bulkInsert('units', [
       {
-        name: 'H-Thai-ML',
-        rank: 'Seattle',
-        legion: 'WA',
+        name: 'Bland McProtagonist',
+        rank: 'Legionary',
+        legion: 'Ultramarines',
         keywords: 'Thai, Pan-Asian',
         pic: `http://localhost:${process.env.PORT}/images/h-thai-ml-tables.jpg`,
-        recruited: 1989,
+        recruited: 41238,
         created_at: new Date(),
         updated_at: new Date()
       }, {
-        name: 'Coding Cat Cafe',
-        rank: 'Phoenix',
-        legion: 'AZ',
-        keywords: 'Coffee, Bakery',
+        name: 'Omegius Alpharon',
+        rank: 'Classifed',
+        legion: 'Omega Legion',
+        keywords: 'Infantry, Primarch'
         pic: `http://localhost:${process.env.PORT}/images/coffee-cat.png`,
-        recruited: 2020,
+        recruited: 39049,
         created_at: new Date(),
         updated_at: new Date()
       }
@@ -42,17 +42,18 @@ module.exports = {
       `SELECT unit_id from units LIMIT 1;`
     );
 
-    await queryInterface.bulkInsert('comments', [
-      {
-        unit_id: units[0].unit_id,
-        author_id: users[0].user_id,
-        rant: false,
-        stars: 5.0,
-        content: 'Wow, simply amazing food here. I highly recommend this to anyone visiting the area!',
-        created_at: new Date(),
-        updated_at: new Date()
-      }
-    ])
+    // remnant from rest-rant basic skeleton, will delete after confirming site still fuctions
+    // await queryInterface.bulkInsert('comments', [
+    //   {
+    //     unit_id: units[0].unit_id,
+    //     author_id: users[0].user_id,
+    //     rant: false,
+    //     stars: 5.0,
+    //     content: 'Wow, simply amazing food here. I highly recommend this to anyone visiting the area!',
+    //     created_at: new Date(),
+    //     updated_at: new Date()
+    //   }
+    // ])
   },
 
   down: async (queryInterface, Sequelize) => {

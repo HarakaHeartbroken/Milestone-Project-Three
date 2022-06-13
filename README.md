@@ -2,7 +2,7 @@
 Final Project for Full Stack certification
 
 
-Milestone Project 3, working title "Iron Tracker", is a campaign and unit lore app that users can log into and have CRUD functionality over units in the Warhammer 40,000 universe. For developmental purposes, the current version is restricted for now to the Iron Warriors faction specifically. 
+Milestone Project 3, working title "Iron Roster", is a campaign and unit lore app that users can log into and have CRUD functionality over units in the Warhammer 40,000 universe. For developmental purposes, the current version is restricted for now to the Iron Warriors faction specifically. 
 
 Specifically, once past a server-side authenticated login page, users will be able to view their and other user's armies, the units within those armies, and be able to edit their own contributions. User info will be stored securely server-side, while local info will be kept client side. For dev purposes, images and other info will be pre-sourced, but once deployed eventual functionality would include user ability to submit/use uploaded images. 
 

@@ -5,10 +5,10 @@ module.exports = (sequelize, DataTypes) => {
 
   class Unit extends Model {
 
-
-    static associate({ Comment }) {
-      Unit.hasMany(Comment, { foreignKey: 'unit_id', as: 'comments' })
-    }
+    // commented out legacy code from rest-rant model, will delete post-testing
+    // static associate({ Comment }) {
+    //   Unit.hasMany(Comment, { foreignKey: 'unit_id', as: 'comments' })
+    // }
 
   };
 
