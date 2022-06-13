@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    height: 100%;
+background: url(https://images.wallpapersden.com/image/download/warhammer-40k-darktide_bGdnamaUmZqaraWkpJRmbmdlrWZlbWU.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+.register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+.register-form h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+
+}
+.register-form p {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+
+}
+.register-form input {
+    font-size: 16px;
+    padding: 15px 10px;
+    width:100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+
+}
+.register-form button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 50%;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.register-form button:hover {
+    color:orange;
+}

@@ -46,8 +46,20 @@ a:hover {
 }
 
 #content {
-    margin-top: 300px;
+    margin-top: 100px;
     display: flex;
-    text-align: center;
     justify-content: center;
+    size: 20%;
+}
+p {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    border-color: gray;
+    background-color: #282828;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 10px;
+    border-style: outset;
 }

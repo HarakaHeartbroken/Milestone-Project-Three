@@ -46,13 +46,16 @@ a:hover {
 }
 
 #content {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 250px;
+    margin-right: 250px;
     margin-top: 300px;
     display: flex;
     text-align: center;
     justify-content: center;
     color: #fff;
-    border-color: #282828;
+    border-color: gray;
+    border-style: outset;
     background: #282828;
+    padding: top 20px;
+    padding: bottom 20px;
 }
