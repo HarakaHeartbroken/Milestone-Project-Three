@@ -4,10 +4,10 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-
-    static associate({ Comment }) {
-      User.hasMany(Comment, { as: 'author', foreignKey: 'author_id' })
-    }
+    // commented out legacy code from rest-rant model, deleting post testing
+    // static associate({ Comment }) {
+    //   User.hasMany(Comment, { as: 'author', foreignKey: 'author_id' })
+    // }
 
   };
   User.init({
