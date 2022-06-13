@@ -7,7 +7,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(https://c4.wallpaperflare.com/wallpaper/128/731/738/warhammer-warhammer-40k-armor-battle-iron-hands-hd-wallpaper-preview.jpg);
+    background-image: url(https://wallpapermemory.com/uploads/252/warhammer-40k-background-hd-2560x1440-272237.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -27,12 +27,13 @@ ul {
 }
 
 li {
+    
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 30px; 
 }
 
 a {
-    text-align: center;
+    text-align: left;
     color: red;
     text-decoration: none;
     font-family: sans-serif;
@@ -45,6 +46,7 @@ a:hover {
 }
 
 #content {
+    margin-top: 300px;
     display: flex;
     text-align: center;
     justify-content: center;
