@@ -1,9 +1,3 @@
-// currently throwing a authentication error when attempting migration
-
-// suspect changing the config export logins will solve, testing now
-
-
-
 require('dotenv').config()
 
 module.exports = {
